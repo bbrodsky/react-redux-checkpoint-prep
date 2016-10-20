@@ -14,10 +14,15 @@ export default class extends React.Component {
     }
 
     render() {
-        return (
-            <div>
-            </div>
-        );
+      let items = this.state.registryItems.map((e,i) => {
+        return <RegistryItem key={i} itemDetails={e} />
+      });
+      return (
+          <div>
+            <h1>My Registry</h1>
+            {items}
+          </div>
+      );
     }
 
 }
